@@ -1,6 +1,6 @@
 <?php
-if (isset($_GET["staffID"]) ) {
-    $staffid = $_GET["staffID"];
+if (isset($_GET["staffid"]) ) {
+    $staffid = $_GET["staffid"];
 
     $servername = "localhost";
     $username = "root";
@@ -10,7 +10,7 @@ if (isset($_GET["staffID"]) ) {
     //Create Connection
     $connection = new mysqli($servername, $username, $password, $database);
 
-    $sql = "DELETE FROM staff WHERE staffID = $staffid";
+    $sql = "DELETE FROM staff WHERE staffid = $staffid";
     $connection -> query($sql);
 }
 

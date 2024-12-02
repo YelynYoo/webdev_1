@@ -76,23 +76,17 @@
         </div>
     </nav>
 
-    //List of Staff
+    <!-- Check List -->
     <div class="container my-5">
-        <h2>List of Staff</h2>
-        <a class = "btn btn-primary" href="/fastfood/create.php" role="button">New Staff</a>
+        <h2>Specify Availability</h2>
 
         <br>
         <table class="table">
             <thead>
                 <tr>
-                    <th>Staff ID</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Date of Birth</th>
-                    <th>Email</th>
-                    <th>Mob</th>
-                    <th>Password</th>
-                    <th>Role ID</th>
+                    <th>Roster ID</th>
+                    <th>Date Time From</th>
+                    <th>Date Time To</th>
                 </tr>
             </thead>
 
@@ -112,7 +106,7 @@
                 }
 
                 //Read all row from database table
-                $sql = "SELECT * FROM staff";
+                $sql = "SELECT * FROM roster";
                 $result = $connection -> query($sql);
 
                 if (!$result) {
@@ -123,19 +117,9 @@
                 while($row = $result -> fetch_assoc()) {
                     echo "
                     <tr>
-                        <td>$row[staffid]</td>
-                        <td>$row[name]</td>
-                        <td>$row[address]</td>
-                        <td>$row[dateofbirth]</td>
-                        <td>$row[email]</td>
-                        <td>$row[mob]</td>
-                        <td>$row[password]</td>
-                        <td>$row[roleid]</td>
-
-                        <td>
-                            <a class='btn btn-primary btn-sm' href='/fastfood/edit.php?staffid=$row[staffid]'>Edit</a>
-                            <a class='btn btn-danger btn-sm' href='/fastfood/delete.php?staffid=$row[staffid]'>Delete</a>
-                        </td>
+                        <td>$row[rosterid]</td>
+                        <td>$row[datetimefrom]</td>
+                        <td>$row[datetimeto]</td>
                     </tr>
 
                     ";

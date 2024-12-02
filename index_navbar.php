@@ -9,7 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-
 <body>
     <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
@@ -54,14 +53,14 @@
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a href="/anthonyfastfood/create2.php" lass="dropdown-item">Create</a></li>
-                <li><a href="/anthonyfastfood/edit2.php" class="dropdown-item">Update</a></li>
-                <li><a href="/anthonyfastfood/delete2.php" class="dropdown-item">Delete</a></li>
+                <li><a href="/anthonyfastfood/create.php" lass="dropdown-item">Create</a></li>
+                <li><a href="/anthonyfastfood/edit.php" class="dropdown-item">Update</a></li>
+                <li><a href="/anthonyfastfood/delete.php" class="dropdown-item">Delete</a></li>
                 </ul>
                 </li>
 
                 <li class="nav-item active">
-                <a href='/anthonyfastfood/availability2.php' class="nav-link active">
+                <a href='/anthonyfastfood/availability.php' class="nav-link active">
                     Availability
                 </a>
                 </li>

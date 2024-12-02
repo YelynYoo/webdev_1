@@ -1,6 +1,6 @@
 <?php
     $email = $_POST["email"];
-    $password = $_POST["passwordHash"];
+    $password = $_POST["password"];
     
 
     //Databas connection
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     if ($user) {
         
-        if (password_verify($_POST["password"], $user["passwordHash"])) {
+        if (password_verify($_POST["password"], $user["password"])) {
             
             session_start();
             
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             
             $_SESSION["staffid"] = $user["staffid"];
             
-            header("Location: index.php");
+            header("Location: index_navbar.php");
             exit;
         }
     }
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 value= "<?= htmlspecialchars($_POST["email"] ?? "") ?>">
         
         <label for="password">Password</label>
-        <input type="password" name="passwordHash" id="password">
+        <input type="password" name="password" id="password">
         
         <button>Log in</button>
     </form>
